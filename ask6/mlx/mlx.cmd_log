@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/mlx_2021/mlx.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/mlx_2021/mlx.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/Administrator/Desktop/exer5-8_ecad/5-8/6/mlx.ucf" -p xc3s1000-ft256-4 "mlx.ngc" mlx.ngd  
+map -intstyle ise -p xc3s1000-ft256-4 -cm area -ir off -pr off -c 100 -o mlx_map.ncd mlx.ngd mlx.pcf 
+par -w -intstyle ise -ol high -t 1 mlx_map.ncd mlx.ncd mlx.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mlx.twx mlx.ncd -o mlx.twr mlx.pcf 
+bitgen -intstyle ise -f mlx.ut mlx.ncd 

@@ -1,0 +1,16 @@
+net dip<7> loc=F15;
+net dip<6> loc=K16;
+net dip<5> loc=K15;
+net dip<4> loc=G2;
+net dip<3> loc=H3;
+net dip<2> loc=H1;
+net dip<1> loc=J1;
+net dip<0> loc=P12;
+net s<7> loc=H15;
+net s<6> loc=J13;
+net s<5> loc=L15;
+net s<4> loc=T13;
+net s<3> loc=N1;
+net s<2> loc=M3;
+net s<1> loc=N2;
+net s<0> loc=L5;

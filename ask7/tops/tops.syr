@@ -1,0 +1,598 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: tops.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tops.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tops"
+Output Format                      : NGC
+Target Device                      : xc3s1000-4-ft256
+
+---- Source Options
+Top Module Name                    : tops
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../topsv/cnt25.v" in library work
+Module <cnt25> compiled
+Module <cnt8b> compiled
+Compiling verilog file "../topsv/stopwatch.v" in library work
+Module <OneHertz> compiled
+Compiling verilog file "../topsv/secondcounter.v" in library work
+Module <stopwatch> compiled
+Module <singleseconds> compiled
+Module <tenthsofseconds> compiled
+Compiling verilog file "../topsv/ms_stopwatch.v" in library work
+Module <secondcounter> compiled
+Compiling verilog file "../topsv/cnt7b.v" in library work
+Module <ms_stopwatch> compiled
+Module <cnt7b> compiled
+Module <cnt125> compiled
+Compiling verilog file "../topsv/bin_2_led.v" in library work
+Module <TenHertz> compiled
+Compiling verilog file "../topsv/bin_2_7.v" in library work
+Module <bin_2_led> compiled
+Compiling verilog file "../topsv/tops.v" in library work
+Module <bin_2_7> compiled
+Module <tops> compiled
+No errors in compilation
+Analysis of file <"tops.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <tops> in library <work>.
+
+Analyzing hierarchy for module <OneHertz> in library <work>.
+
+Analyzing hierarchy for module <TenHertz> in library <work>.
+
+Analyzing hierarchy for module <secondcounter> in library <work>.
+
+Analyzing hierarchy for module <singleseconds> in library <work>.
+
+Analyzing hierarchy for module <stopwatch> in library <work>.
+
+Analyzing hierarchy for module <ms_stopwatch> in library <work>.
+
+Analyzing hierarchy for module <bin_2_7> in library <work>.
+
+Analyzing hierarchy for module <bin_2_led> in library <work>.
+
+Analyzing hierarchy for module <cnt25> in library <work>.
+
+Analyzing hierarchy for module <cnt8b> in library <work>.
+
+Analyzing hierarchy for module <cnt7b> in library <work>.
+
+Analyzing hierarchy for module <cnt125> in library <work>.
+
+Analyzing hierarchy for module <tenthsofseconds> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <tops>.
+Module <tops> is correct for synthesis.
+ 
+Analyzing module <OneHertz> in library <work>.
+Module <OneHertz> is correct for synthesis.
+ 
+Analyzing module <cnt25> in library <work>.
+Module <cnt25> is correct for synthesis.
+ 
+Analyzing module <cnt8b> in library <work>.
+Module <cnt8b> is correct for synthesis.
+ 
+Analyzing module <TenHertz> in library <work>.
+Module <TenHertz> is correct for synthesis.
+ 
+Analyzing module <cnt7b> in library <work>.
+Module <cnt7b> is correct for synthesis.
+ 
+Analyzing module <cnt125> in library <work>.
+Module <cnt125> is correct for synthesis.
+ 
+Analyzing module <secondcounter> in library <work>.
+Module <secondcounter> is correct for synthesis.
+ 
+Analyzing module <tenthsofseconds> in library <work>.
+Module <tenthsofseconds> is correct for synthesis.
+ 
+Analyzing module <singleseconds> in library <work>.
+Module <singleseconds> is correct for synthesis.
+ 
+Analyzing module <stopwatch> in library <work>.
+Module <stopwatch> is correct for synthesis.
+ 
+Analyzing module <ms_stopwatch> in library <work>.
+Module <ms_stopwatch> is correct for synthesis.
+ 
+Analyzing module <bin_2_7> in library <work>.
+Module <bin_2_7> is correct for synthesis.
+ 
+Analyzing module <bin_2_led> in library <work>.
+Module <bin_2_led> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <singleseconds>.
+    Related source file is "../topsv/secondcounter.v".
+    Found 4-bit up counter for signal <ss>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <singleseconds> synthesized.
+
+
+Synthesizing Unit <stopwatch>.
+    Related source file is "../topsv/stopwatch.v".
+    Found 4-bit register for signal <disp_sec>.
+    Found 4-bit register for signal <temp>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <stopwatch> synthesized.
+
+
+Synthesizing Unit <ms_stopwatch>.
+    Related source file is "../topsv/ms_stopwatch.v".
+    Found 10-bit register for signal <disp_ms>.
+    Found 10-bit register for signal <temp>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <ms_stopwatch> synthesized.
+
+
+Synthesizing Unit <bin_2_7>.
+    Related source file is "../topsv/bin_2_7.v".
+    Found 16x7-bit ROM for signal <s>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_2_7> synthesized.
+
+
+Synthesizing Unit <bin_2_led>.
+    Related source file is "../topsv/bin_2_led.v".
+    Found 16x10-bit ROM for signal <s>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_2_led> synthesized.
+
+
+Synthesizing Unit <cnt25>.
+    Related source file is "../topsv/cnt25.v".
+    Found 6-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cnt25> synthesized.
+
+
+Synthesizing Unit <cnt8b>.
+    Related source file is "../topsv/cnt25.v".
+    Found 8-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cnt8b> synthesized.
+
+
+Synthesizing Unit <cnt7b>.
+    Related source file is "../topsv/cnt7b.v".
+    Found 7-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cnt7b> synthesized.
+
+
+Synthesizing Unit <cnt125>.
+    Related source file is "../topsv/cnt7b.v".
+    Found 7-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <cnt125> synthesized.
+
+
+Synthesizing Unit <tenthsofseconds>.
+    Related source file is "../topsv/secondcounter.v".
+    Found 3-bit up counter for signal <ts>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <tenthsofseconds> synthesized.
+
+
+Synthesizing Unit <OneHertz>.
+    Related source file is "../topsv/cnt25.v".
+Unit <OneHertz> synthesized.
+
+
+Synthesizing Unit <TenHertz>.
+    Related source file is "../topsv/cnt7b.v".
+Unit <TenHertz> synthesized.
+
+
+Synthesizing Unit <secondcounter>.
+    Related source file is "../topsv/secondcounter.v".
+Unit <secondcounter> synthesized.
+
+
+Synthesizing Unit <tops>.
+    Related source file is "../topsv/tops.v".
+WARNING:Xst:646 - Signal <micro> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <tops> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x10-bit ROM                                         : 1
+ 16x7-bit ROM                                          : 2
+# Counters                                             : 12
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 6
+ 7-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 6
+ 10-bit register                                       : 2
+ 4-bit register                                        : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <temp_3> (without init value) has a constant value of 0 in block <s1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <disp_sec_3> (without init value) has a constant value of 0 in block <s1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <temp_4> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <temp_5> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <temp_6> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <temp_7> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <temp_8> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <temp_9> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <disp_ms_4> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <disp_ms_5> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <disp_ms_6> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <disp_ms_7> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <disp_ms_8> of sequential type is unconnected in block <s3>.
+WARNING:Xst:2677 - Node <disp_ms_9> of sequential type is unconnected in block <s3>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x10-bit ROM                                         : 1
+ 16x7-bit ROM                                          : 2
+# Counters                                             : 12
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 6
+ 7-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <temp_4> in Unit <ms_stopwatch> is equivalent to the following 5 FFs/Latches, which will be removed : <temp_5> <temp_6> <temp_7> <temp_8> <temp_9> 
+WARNING:Xst:1710 - FF/Latch <temp_4> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ms_4> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ms_5> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ms_6> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ms_7> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ms_8> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <disp_ms_9> (without init value) has a constant value of 0 in block <ms_stopwatch>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <tops> ...
+
+Optimizing unit <stopwatch> ...
+
+Optimizing unit <ms_stopwatch> ...
+WARNING:Xst:1710 - FF/Latch <s1/disp_sec_3> (without init value) has a constant value of 0 in block <tops>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1/temp_3> (without init value) has a constant value of 0 in block <tops>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block tops, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : tops.ngr
+Top Level Output File Name         : tops
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 27
+
+Cell Usage :
+# BELS                             : 168
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 7
+#      LUT2                        : 19
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 39
+#      LUT3_D                      : 6
+#      LUT4                        : 56
+#      LUT4_D                      : 15
+#      LUT4_L                      : 1
+#      MUXCY                       : 7
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 91
+#      FD                          : 11
+#      FDC                         : 7
+#      FDCE                        : 62
+#      FDE                         : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 2
+#      OBUF                        : 24
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                       79  out of   7680     1%  
+ Number of Slice Flip Flops:             91  out of  15360     0%  
+ Number of 4 input LUTs:                151  out of  15360     0%  
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    173    15%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 91    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 69    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.132ns (Maximum Frequency: 122.971MHz)
+   Minimum input arrival time before clock: 4.236ns
+   Maximum output required time after clock: 9.189ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.132ns (frequency: 122.971MHz)
+  Total number of paths / destination ports: 1541 / 147
+-------------------------------------------------------------------------
+Delay:               8.132ns (Levels of Logic = 4)
+  Source:            i0/i1/cnt_2 (FF)
+  Destination:       i1/i0/ss_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i0/i1/cnt_2 to i1/i0/ss_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.720   1.256  i0/i1/cnt_2 (i0/i1/cnt_2)
+     LUT3_D:I0->LO         1   0.551   0.126  i0/i1/clkdiv25_SW0 (N40)
+     LUT4:I3->O            6   0.551   1.198  i0/i1/clkdiv25 (i0/second)
+     LUT3:I1->O            8   0.551   1.109  i0/en_nxt11 (i0/_and0001)
+     LUT4:I3->O            4   0.551   0.917  i0/en_nxt27 (en_nxt)
+     FDCE:CE                   0.602          i1/i0/ss_0
+    ----------------------------------------
+    Total                      8.132ns (3.526ns logic, 4.606ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.236ns (Levels of Logic = 2)
+  Source:            freeze (PAD)
+  Destination:       s2/temp_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: freeze to s2/temp_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.118  freeze_IBUF (freeze_IBUF)
+     INV:I->O             11   0.551   1.144  s3/freeze_inv1_INV_0 (s1/freeze_inv)
+     FDE:CE                    0.602          s1/temp_0
+    ----------------------------------------
+    Total                      4.236ns (1.974ns logic, 2.262ns route)
+                                       (46.6% logic, 53.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 89 / 24
+-------------------------------------------------------------------------
+Offset:              9.189ns (Levels of Logic = 2)
+  Source:            s3/disp_ms_1 (FF)
+  Destination:       msled<9> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: s3/disp_ms_1 to msled<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.720   1.473  s3/disp_ms_1 (s3/disp_ms_1)
+     LUT4:I0->O            1   0.551   0.801  ml/Mrom_s91 (msled_9_OBUF)
+     OBUF:I->O                 5.644          msled_9_OBUF (msled<9>)
+    ----------------------------------------
+    Total                      9.189ns (6.915ns logic, 2.274ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.72 secs
+ 
+--> 
+
+Total memory usage is 134744 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

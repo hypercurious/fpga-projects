@@ -1,0 +1,8 @@
+MO kbd_protocol NULL ../eightv/eight.v vlg7A/kbd__protocol.bin 1626972160
+MO division NULL ../eightv/division.v vlg0D/division.bin 1626972160
+MO scan2bin NULL ../eightv/eight.v vlg4C/scan2bin.bin 1626972160
+MO scan_2_7seg NULL ../eightv/eight.v vlg17/scan__2__7seg.bin 1626972160
+MO eight NULL ../eightv/eight.v vlg65/eight.bin 1626972160
+MO bin2seg NULL ../eightv/eight.v vlg42/bin2seg.bin 1626972160
+MO operation NULL ../eightv/eight.v vlg35/operation.bin 1626972160
+MO previous_key NULL ../eightv/eight.v vlg41/previous__key.bin 1626972160

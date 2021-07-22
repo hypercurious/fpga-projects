@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/papa/ask6_2b/ask6_2b.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/papa/ask6_2b/ask6_2b.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/papa/ask6_2b/ask6_2b.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/papa/ask6_2b/ask6_2b.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/Administrator/Desktop/papa/ask6_2bv/ask6_2b.ucf" -p xc3s1000-ft256-4 "ask6_2b.ngc" ask6_2b.ngd  
+map -intstyle ise -p xc3s1000-ft256-4 -cm area -ir off -pr off -c 100 -o ask6_2b_map.ncd ask6_2b.ngd ask6_2b.pcf 
+par -w -intstyle ise -ol high -t 1 ask6_2b_map.ncd ask6_2b.ncd ask6_2b.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ask6_2b.twx ask6_2b.ncd -o ask6_2b.twr ask6_2b.pcf 
+bitgen -intstyle ise -f ask6_2b.ut ask6_2b.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/Administrator/Desktop/papa/ask6_2bv/ask6_2b.ucf" -p xc3s1000-ft256-4 "ask6_2b.ngc" ask6_2b.ngd  
+map -intstyle ise -p xc3s1000-ft256-4 -cm area -ir off -pr off -c 100 -o ask6_2b_map.ncd ask6_2b.ngd ask6_2b.pcf 
+par -w -intstyle ise -ol high -t 1 ask6_2b_map.ncd ask6_2b.ncd ask6_2b.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ask6_2b.twx ask6_2b.ncd -o ask6_2b.twr ask6_2b.pcf 
+bitgen -intstyle ise -f ask6_2b.ut ask6_2b.ncd 

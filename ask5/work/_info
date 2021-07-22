@@ -1,0 +1,83 @@
+m255
+cModel Technology
+dC:\Documents and Settings\Administrator\Desktop\papa\ask5
+vcounter
+InhaZU@c1mC5C@j^3Kz[M01
+VGz4::QoKHjiCUnb:lY37>3
+w1300868015
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/counter.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vcounter_4bit
+ISS6zc5d6A?:7R5zzRJRZS1
+VV?2GKe>SPQ;l2l=kN?aDP2
+w1626791248
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/counter_4bit.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vcounter_8bit
+INRRiX[NHK7CQIheO8FMJX0
+VC1d_V<W^DA6fbC>`hBf;R1
+w1626786132
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/counter_8bit.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vsync_counter_4bit
+I=4eUlDjSW@9^Nl[OX?hSX2
+V8g>8e9?N6LK?eET^2S2i>2
+w1626794065
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/sync_counter_4bit.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vsync_counter_8bit
+ImcQmYIb>3`RE:6c3KY]ai3
+V]`5a[JNmEJ7eUX<2nBXP^0
+w1626794070
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/sync_counter_8bit.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vtest_sync_counter_8bit
+IoU6VoIi9`z`h7^1MHbEM91
+V_E=g0XMoMTK2a]9O?>cid3
+w1626794080
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/test_sync_counter_8bit.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vtestcounter
+Ig3XoAjW8`9[YJi50MOJD41
+VfkQzk@2E]iYP5f1I40do`1
+w1300868036
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/testcounter.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
+vtestcounter_8bit
+IU>EIIJ[7FHDPYCZZj?lEK3
+VKd3G1HB2Y3egHe]RSNh`Q1
+w1626785513
+FC:/Documents and Settings/Administrator/Desktop/papa/ask5/testcounter_8bit.v
+L0 1
+OE;L;5.7f;17
+r1
+31
+o-work work
