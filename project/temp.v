@@ -121,7 +121,9 @@ module VGA(reset, clk, scancode, flag, xcnt, ycnt, r, g, b);
 				 (scancode==8'h3e) ? 4'd8  :
 				 (scancode==8'h46) ? 4'd9  : 
                                  (scancode==8'h21) ? 4'd10 :
-				 (scancode==8'h43) ? 4'd11 : rflag;
+				 (scancode==8'h43) ? 4'd11 :
+				 (scancode==8'h33) ? 4'd12 :
+				 (scancode==8'h2a) ? 4'd13 : rflag;
 			
 			if (rflag==4'd0) begin
 				c0 <= (scancode==8'h2d) ? 9'b111000000 :
@@ -214,6 +216,16 @@ module VGA(reset, clk, scancode, flag, xcnt, ycnt, r, g, b);
 				c8 <= ~c8;
 				c9 <= ~c9;
                         end
+			if (rflag==4'd12) begin
+				c3 <= c1 or c2;
+				c6 <= c4 or c5;
+				c9 <= c7 or c8;
+			end
+			if (rflag==4'd13) begin
+				c7 <= c1 or c4;
+				c8 <= c2 or c5;
+				c9 <= c3 or c6;
+			end
 		end
 	end
 	assign {r, g, b} = (region==4'd0) ? c0 :
