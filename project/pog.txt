@@ -325,3 +325,4 @@ net b<0> loc=c9;
 			if (r1 or r2 or r3 or r4 or r5 or r6 or r8 or r9) r7 <= 0;
 			if (r1 or r2 or r3 or r4 or r5 or r6 or r7 or r9) r8 <= 0;
 			if (r1 or r2 or r3 or r4 or r5 or r6 or r7 or r8) r9 <= 0;
+			
