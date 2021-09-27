@@ -217,14 +217,14 @@ module VGA(reset, clk, scancode, flag, xcnt, ycnt, r, g, b);
 				c9 <= ~c9;
                         end
 			if (rflag==4'd12) begin
-				c3 <= c1 or c2;
-				c6 <= c4 or c5;
-				c9 <= c7 or c8;
+				c3 <= c1 | c2;
+				c6 <= c4 | c5;
+				c9 <= c7 | c8;
 			end
 			if (rflag==4'd13) begin
-				c7 <= c1 or c4;
-				c8 <= c2 or c5;
-				c9 <= c3 or c6;
+				c7 <= c1 | c4;
+				c8 <= c2 | c5;
+				c9 <= c3 | c6;
 			end
 		end
 	end
