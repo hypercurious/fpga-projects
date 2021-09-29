@@ -1,0 +1,547 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: project.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "project"
+Output Format                      : NGC
+Target Device                      : xc3s1000-4-ft256
+
+---- Source Options
+Top Module Name                    : project
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../projectv/temp.v" in library work
+Module <kbd_protocol> compiled
+Module <pixel_clk> compiled
+Module <sync> compiled
+Module <VGA> compiled
+Module <project> compiled
+No errors in compilation
+Analysis of file <"project.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <project> in library <work>.
+
+Analyzing hierarchy for module <pixel_clk> in library <work>.
+
+Analyzing hierarchy for module <sync> in library <work>.
+
+Analyzing hierarchy for module <kbd_protocol> in library <work>.
+
+Analyzing hierarchy for module <VGA> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <project>.
+Module <project> is correct for synthesis.
+ 
+Analyzing module <pixel_clk> in library <work>.
+Module <pixel_clk> is correct for synthesis.
+ 
+Analyzing module <sync> in library <work>.
+Module <sync> is correct for synthesis.
+ 
+Analyzing module <kbd_protocol> in library <work>.
+Module <kbd_protocol> is correct for synthesis.
+ 
+Analyzing module <VGA> in library <work>.
+Module <VGA> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pixel_clk>.
+    Related source file is "../projectv/temp.v".
+    Found 2-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <pixel_clk> synthesized.
+
+
+Synthesizing Unit <sync>.
+    Related source file is "../projectv/temp.v".
+    Found 10-bit up counter for signal <xcnt>.
+    Found 9-bit up counter for signal <ycnt>.
+    Found 1-bit register for signal <h>.
+    Found 10-bit comparator greater for signal <h$cmp_gt0000> created at line 78.
+    Found 10-bit comparator less for signal <h$cmp_lt0000> created at line 78.
+    Found 1-bit register for signal <v>.
+    Found 9-bit comparator greater for signal <v$cmp_gt0000> created at line 79.
+    Found 9-bit comparator less for signal <v$cmp_lt0000> created at line 79.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <sync> synthesized.
+
+
+Synthesizing Unit <kbd_protocol>.
+    Related source file is "../projectv/temp.v".
+    Found 1-bit register for signal <flag>.
+    Found 8-bit register for signal <scancode>.
+    Found 4-bit up counter for signal <cnt>.
+    Found 1-bit register for signal <f0>.
+    Found 1-bit xor9 for signal <flag$xor0000> created at line 28.
+    Found 8-bit register for signal <ps2clksamples>.
+    Found 10-bit register for signal <shift>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <kbd_protocol> synthesized.
+
+
+Synthesizing Unit <VGA>.
+    Related source file is "../projectv/temp.v".
+    Using one-hot encoding for signal <region>.
+    Using one-hot encoding for signal <rflag>.
+    Found 9-bit register for signal <c1>.
+    Found 9-bit register for signal <c2>.
+    Found 9-bit register for signal <c3>.
+    Found 9-bit register for signal <c4>.
+    Found 9-bit register for signal <c5>.
+    Found 9-bit register for signal <c6>.
+    Found 9-bit register for signal <c7>.
+    Found 9-bit register for signal <c8>.
+    Found 9-bit register for signal <c9>.
+    Found 28-bit up counter for signal <counter>.
+    Found 10-bit comparator greater for signal <region$cmp_gt0000> created at line 96.
+    Found 9-bit comparator greater for signal <region$cmp_gt0001> created at line 96.
+    Found 10-bit comparator greater for signal <region$cmp_gt0002> created at line 96.
+    Found 10-bit comparator greater for signal <region$cmp_gt0003> created at line 96.
+    Found 9-bit comparator greater for signal <region$cmp_gt0004> created at line 96.
+    Found 9-bit comparator greater for signal <region$cmp_gt0005> created at line 96.
+    Found 10-bit comparator less for signal <region$cmp_lt0000> created at line 96.
+    Found 9-bit comparator less for signal <region$cmp_lt0001> created at line 96.
+    Found 10-bit comparator less for signal <region$cmp_lt0002> created at line 96.
+    Found 10-bit comparator less for signal <region$cmp_lt0003> created at line 96.
+    Found 9-bit comparator less for signal <region$cmp_lt0004> created at line 96.
+    Found 9-bit comparator less for signal <region$cmp_lt0005> created at line 96.
+    Found 16-bit register for signal <rflag>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  81 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+Unit <VGA> synthesized.
+
+
+Synthesizing Unit <project>.
+    Related source file is "../projectv/temp.v".
+Unit <project> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 5
+ 10-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 28-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 17
+ 1-bit register                                        : 4
+ 10-bit register                                       : 1
+ 16-bit register                                       : 1
+ 8-bit register                                        : 2
+ 9-bit register                                        : 9
+# Comparators                                          : 16
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 4
+ 9-bit comparator greater                              : 4
+ 9-bit comparator less                                 : 4
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 5
+ 10-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 28-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+# Comparators                                          : 16
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 4
+ 9-bit comparator greater                              : 4
+ 9-bit comparator less                                 : 4
+# Xors                                                 : 1
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <project> ...
+
+Optimizing unit <sync> ...
+
+Optimizing unit <kbd_protocol> ...
+
+Optimizing unit <VGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block project, actual ratio is 4.
+FlipFlop keyboard/flag has been replicated 1 time(s)
+FlipFlop keyboard/scancode_4 has been replicated 1 time(s)
+FlipFlop keyboard/scancode_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 183
+ Flip-Flops                                            : 183
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : project.ngr
+Top Level Output File Name         : project
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 881
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 44
+#      LUT2                        : 21
+#      LUT2_D                      : 9
+#      LUT2_L                      : 7
+#      LUT3                        : 108
+#      LUT3_D                      : 8
+#      LUT3_L                      : 34
+#      LUT4                        : 386
+#      LUT4_D                      : 59
+#      LUT4_L                      : 82
+#      MUXCY                       : 44
+#      MUXF5                       : 22
+#      VCC                         : 1
+#      XORCY                       : 47
+# FlipFlops/Latches                : 183
+#      FDC                         : 12
+#      FDCE                        : 68
+#      FDE                         : 81
+#      FDPE                        : 1
+#      FDR                         : 12
+#      FDRE                        : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 3
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                      404  out of   7680     5%  
+ Number of Slice Flip Flops:            183  out of  15360     1%  
+ Number of 4 input LUTs:                766  out of  15360     4%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    173     8%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2     |
+clk251(pxl/clk251:O)               | BUFG(*)(snc/ycnt_8)    | 181   |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 81    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.836ns (Maximum Frequency: 113.170MHz)
+   Minimum input arrival time before clock: 6.518ns
+   Maximum output required time after clock: 23.464ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.182ns (frequency: 314.268MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               3.182ns (Levels of Logic = 1)
+  Source:            pxl/cnt_0 (FF)
+  Destination:       pxl/cnt_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pxl/cnt_0 to pxl/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.720   0.907  pxl/cnt_0 (pxl/cnt_0)
+     INV:I->O              1   0.551   0.801  pxl/Mcount_cnt_xor<0>11_INV_0 (Result<0>)
+     FDC:D                     0.203          pxl/cnt_0
+    ----------------------------------------
+    Total                      3.182ns (1.474ns logic, 1.708ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk251'
+  Clock period: 8.836ns (frequency: 113.170MHz)
+  Total number of paths / destination ports: 7481 / 287
+-------------------------------------------------------------------------
+Delay:               8.836ns (Levels of Logic = 4)
+  Source:            vga/rflag_11 (FF)
+  Destination:       vga/c9_0 (FF)
+  Source Clock:      clk251 rising
+  Destination Clock: clk251 rising
+
+  Data Path: vga/rflag_11 to vga/c9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            83   0.720   2.484  vga/rflag_11 (vga/rflag_11)
+     LUT2_D:I0->O         20   0.551   1.571  vga/c9_mux0000<0>31 (vga/N97)
+     LUT4_D:I3->O          1   0.551   0.827  vga/c9_mux0000<0>7 (vga/c9_mux0000<0>7)
+     LUT4:I3->O            1   0.551   0.827  vga/c9_mux0000<0>12_SW1 (N403)
+     LUT4:I3->O            1   0.551   0.000  vga/c9_mux0000<0>68 (vga/c9_mux0000<0>)
+     FDE:D                     0.203          vga/c9_0
+    ----------------------------------------
+    Total                      8.836ns (3.127ns logic, 5.709ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk251'
+  Total number of paths / destination ports: 96 / 96
+-------------------------------------------------------------------------
+Offset:              6.518ns (Levels of Logic = 4)
+  Source:            ps2data (PAD)
+  Destination:       keyboard/f0 (FF)
+  Destination Clock: clk251 rising
+
+  Data Path: ps2data to keyboard/f0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   0.945  ps2data_IBUF (ps2data_IBUF)
+     LUT4:I2->O            1   0.551   0.869  keyboard/f0_not0001334 (keyboard/f0_not0001334)
+     LUT4_D:I2->O          1   0.551   0.827  keyboard/f0_not0001344 (keyboard/f0_not0001344)
+     LUT4:I3->O            1   0.551   0.801  keyboard/f0_not000139 (keyboard/f0_not0001)
+     FDCE:CE                   0.602          keyboard/f0
+    ----------------------------------------
+    Total                      6.518ns (3.076ns logic, 3.442ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk251'
+  Total number of paths / destination ports: 8768 / 11
+-------------------------------------------------------------------------
+Offset:              23.464ns (Levels of Logic = 10)
+  Source:            snc/xcnt_5 (FF)
+  Destination:       b<2> (PAD)
+  Source Clock:      clk251 rising
+
+  Data Path: snc/xcnt_5 to b<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.720   1.473  snc/xcnt_5 (snc/xcnt_5)
+     LUT3:I0->O            1   0.551   1.140  vga/region_and0000244 (vga/region_and0000244)
+     LUT4:I0->O            1   0.551   0.996  vga/region_and0000291 (vga/region_and0000291)
+     LUT4:I1->O           23   0.551   1.896  vga/region_and00002123 (vga/N105)
+     LUT4:I1->O           10   0.551   1.329  vga/region<4>11 (vga/N90)
+     LUT3:I1->O            2   0.551   1.072  vga/region<9>11 (vga/N72)
+     LUT4:I1->O            3   0.551   1.246  vga/region<9>21 (vga/N811)
+     LUT3:I0->O            9   0.551   1.319  vga/region<7>1 (vga/region<7>)
+     LUT4:I1->O            1   0.551   0.869  vga/_AUX_1<8>54_SW0 (N657)
+     LUT3:I2->O            1   0.551   0.801  vga/_AUX_1<8>54 (r_2_OBUF)
+     OBUF:I->O                 5.644          r_2_OBUF (r<2>)
+    ----------------------------------------
+    Total                     23.464ns (11.323ns logic, 12.141ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.50 secs
+ 
+--> 
+
+Total memory usage is 139864 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

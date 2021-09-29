@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map O.40d on Tue Sep 28 20:52:02 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T9" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "C9" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "E7" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "D5" LEVEL 1;
+COMP "g<0>" LOCATE = SITE "A8" LEVEL 1;
+COMP "g<1>" LOCATE = SITE "A5" LEVEL 1;
+COMP "g<2>" LOCATE = SITE "C3" LEVEL 1;
+COMP "r<0>" LOCATE = SITE "C8" LEVEL 1;
+COMP "r<1>" LOCATE = SITE "D6" LEVEL 1;
+COMP "r<2>" LOCATE = SITE "B1" LEVEL 1;
+COMP "ps2data" LOCATE = SITE "E13" LEVEL 1;
+COMP "reset" LOCATE = SITE "K4" LEVEL 1;
+COMP "ps2clk" LOCATE = SITE "B16" LEVEL 1;
+COMP "h_sync" LOCATE = SITE "B7" LEVEL 1;
+COMP "v_sync" LOCATE = SITE "D8" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+
