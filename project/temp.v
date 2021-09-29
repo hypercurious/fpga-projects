@@ -110,7 +110,7 @@ module VGA(reset, clk, scancode, flag, xcnt, ycnt, r, g, b);
 	always @(posedge clk or posedge reset) begin
 		if (reset) begin
 			rflag <= 4'd0;
-			counter <= 28'd0;
+			counter <= 28'd0;	
 		end
 		else if(flag) begin
 			rflag <= (scancode==8'h45) ? 4'd0  :
@@ -243,15 +243,15 @@ module VGA(reset, clk, scancode, flag, xcnt, ycnt, r, g, b);
 			end
 			if (rflag==4'd15) begin
 				if(counter[25]==1'b1) begin
-					c1 <= {counter[27:23],counter[23:20]};
-					c2 <= {counter[27:23],counter[25:22]};
-					c3 <= {counter[27:23],counter[27:24]};
-					c4 <= {counter[27:23],counter[25:22]};
-					c5 <= {counter[27:23],counter[26:23]};
-					c6 <= {counter[27:23],counter[26:23]};
-					c7 <= {counter[27:23],counter[27:24]};
-					c8 <= {counter[27:23],counter[26:23]};
-					c9 <= {counter[27:23],counter[27:24]};
+					c1 <= {counter[27:25],counter[25:23],counter[23:21]};
+					c2 <= {counter[27:25],counter[25:23],counter[25:23]};
+					c3 <= {counter[27:25],counter[25:23],counter[27:25]};
+					c4 <= {counter[27:25],counter[25:23],counter[25:23]};
+					c5 <= {counter[27:25],counter[25:23],counter[26:24]};
+					c6 <= {counter[27:25],counter[25:23],counter[26:24]};
+					c7 <= {counter[27:25],counter[25:23],counter[27:25]};
+					c8 <= {counter[27:25],counter[25:23],counter[26:24]};
+					c9 <= {counter[27:25],counter[25:23],counter[27:25]};
 				end
 			end
 		end
