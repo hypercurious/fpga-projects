@@ -1,5 +1,5 @@
 module sync_counter_4bit(clear, clock, load, start_stop, count, data);
-    input   [3:0] data;
+    input      [3:0] data;
     output reg [3:0] count;
     input start_stop, load, clock, clear;
     
