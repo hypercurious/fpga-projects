@@ -8,7 +8,7 @@ module counter (clear, clock, load, start_stop, count, data);
   reg [6:0] count;
   
   always @(posedge clock or posedge clear)
-   if (clear) count <= 0;
+    if (clear) count <= 0;
     else if (load) count <= data;
-              else if (start_stop) count <= count + 1;
+    else if (start_stop) count <= count + 1;
 endmodule
