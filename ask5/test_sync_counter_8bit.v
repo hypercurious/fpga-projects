@@ -3,7 +3,7 @@ module test_sync_counter_8bit();
     wire [7:0] c;
     reg s_s, l, clk, clr;
     
-    counter_8bit inst0 (clr, clk, l, s_s, c, d);
+    sync_counter_8bit inst0 (clr, clk, l, s_s, c, d);
     
     initial begin
         #5 clk <= 0; clr <= 0; l <=0; s_s <= 0; d <= 8'hCD;
