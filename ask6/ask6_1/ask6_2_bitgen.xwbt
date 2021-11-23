@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Documents and Settings\Administrator\Desktop\papa\ask6_1\ask6_2.ncd
-OUTFILE=C:\Documents and Settings\Administrator\Desktop\papa\ask6_1\ask6_2.bit
-FAMILY=Spartan3
-PART=xc3s1000-4ft256
-WORKINGDIR=C:\Documents and Settings\Administrator\Desktop\papa\ask6_1
-LICENSE=WebPack
-USER_INFO=174171163_174171164_0_258

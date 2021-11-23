@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/papa/ask6_1/ask6_1.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/papa/ask6_1/ask6_1.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Documents and Settings/Administrator/Desktop/papa/ask6_1v/ask6_1.ucf" -p xc3s1000-ft256-4 "ask6_1.ngc" ask6_1.ngd  
-map -intstyle ise -p xc3s1000-ft256-4 -cm area -ir off -pr off -c 100 -o ask6_1_map.ncd ask6_1.ngd ask6_1.pcf 
-par -w -intstyle ise -ol high -t 1 ask6_1_map.ncd ask6_1.ncd ask6_1.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ask6_1.twx ask6_1.ncd -o ask6_1.twr ask6_1.pcf 
-bitgen -intstyle ise -f ask6_1.ut ask6_1.ncd 

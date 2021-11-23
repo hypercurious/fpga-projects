@@ -1,8 +1,0 @@
-Release 13.1 Drc O.40d (nt)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
-
-Thu Jul 15 13:56:10 2021
-
-drc -z ask6_2.ncd ask6_2.pcf
-
-DRC detected 0 errors and 0 warnings.
