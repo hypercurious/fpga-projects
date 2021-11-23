@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Documents and Settings\Administrator\Desktop\papa\temp\project.ncd
-OUTFILE=C:\Documents and Settings\Administrator\Desktop\papa\temp\project.bit
-FAMILY=Spartan3
-PART=xc3s1000-4ft256
-WORKINGDIR=C:\Documents and Settings\Administrator\Desktop\papa\temp
-LICENSE=WebPack
-USER_INFO=174694076_174171164_0_313
