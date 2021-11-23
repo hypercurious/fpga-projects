@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Documents and Settings\Administrator\Desktop\papa\ask8\eight\eight.ncd
-OUTFILE=C:\Documents and Settings\Administrator\Desktop\papa\ask8\eight\eight.bit
-FAMILY=Spartan3
-PART=xc3s1000-4ft256
-WORKINGDIR=C:\Documents and Settings\Administrator\Desktop\papa\ask8\eight
-LICENSE=WebPack
-USER_INFO=174171163_174171164_0_258
