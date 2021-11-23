@@ -1,8 +1,0 @@
-Release 13.1 Drc O.40d (nt)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
-
-Wed Jul 14 14:07:21 2021
-
-drc -z mlx.ncd mlx.pcf
-
-DRC detected 0 errors and 0 warnings.
