@@ -1,8 +1,0 @@
-verilog work "../topsv/cnt25.v"
-verilog work "../topsv/stopwatch.v"
-verilog work "../topsv/secondcounter.v"
-verilog work "../topsv/ms_stopwatch.v"
-verilog work "../topsv/cnt7b.v"
-verilog work "../topsv/bin_2_led.v"
-verilog work "../topsv/bin_2_7.v"
-verilog work "../topsv/tops.v"
